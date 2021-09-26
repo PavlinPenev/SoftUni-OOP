@@ -52,14 +52,10 @@ namespace Animals
                 else
                 {
                     Console.WriteLine($"Invalid input!");
-
                     animalType = Console.ReadLine();
-
                     continue;
                 }
-
                 animals.Add(currentAnimal);
-
                 animalType = Console.ReadLine();
             }
 
