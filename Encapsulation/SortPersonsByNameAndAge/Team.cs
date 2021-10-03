@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace PersonsInfo
 {
-    public class Team // Task 05. First And Reserve Team
+    public class Team // Task 04. First And Reserve Team
     {
         private string name;
         private List<Person> firstTeam;
