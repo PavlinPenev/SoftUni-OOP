@@ -28,7 +28,7 @@ namespace PersonsInfo
             {                                                                                               //
                 if (value.Length < 3)                                                                       //
                 {                                                                                           //
-                    throw new ArgumentException("First name cannot contain fewer than 3 symbols!");   // Task 03. Validation
+                    throw new ArgumentException("First name cannot contain fewer than 3 symbols!");         // Task 03. Validation
                 }                                                                                           //
                                                                                                             //
                 firstName = value;                                                                          //
@@ -42,7 +42,7 @@ namespace PersonsInfo
             {                                                                                                      //
                 if (value.Length < 3)                                                                              //
                 {                                                                                                  //
-                    throw new ArgumentException("Last name cannot contain fewer than 3 symbols!");           // Task 03. Validation
+                    throw new ArgumentException("Last name cannot contain fewer than 3 symbols!");                 // Task 03. Validation
                 }                                                                                                  //
                                                                                                                    //
                 lastName = value;                                                                                  //
@@ -55,7 +55,7 @@ namespace PersonsInfo
             {                                                                                             //
                 if (value <= 0)                                                                           //
                 {                                                                                         //
-                    throw new ArgumentException("Age cannot be zero or negative integer!");         // Task 03. Validation
+                    throw new ArgumentException("Age cannot be zero or negative integer!");               // Task 03. Validation
                 }                                                                                         //
                                                                                                           //
                 age = value;                                                                              //
@@ -69,7 +69,7 @@ namespace PersonsInfo
             {                                                                                           //
                 if (value < 460)                                                                        //
                 {                                                                                       //
-                    throw new ArgumentException("Salary cannot be less than 460 leva!");          // Task 03. Validation
+                    throw new ArgumentException("Salary cannot be less than 460 leva!");                // Task 03. Validation
                 }                                                                                       //
                                                                                                         //
                 salary = value;                                                                         //
