@@ -9,6 +9,7 @@ namespace PizzaCalories
         private const double CrispyModifier = 0.9;
         private const double ChewyModifier = 1.1;
         private const double HomemadeModifier = 1.0;
+        private const double ModifierPerGram = 2;
 
         private string flourType;
         private string bakingTechnique;
@@ -122,7 +123,7 @@ namespace PizzaCalories
                 modifierTechnique = HomemadeModifier;
             }
 
-            caloriesPerGram = (2 * Weight) * modifierFlour * modifierTechnique;
+            caloriesPerGram = (ModifierPerGram * Weight) * modifierFlour * modifierTechnique;
         }
 
     }

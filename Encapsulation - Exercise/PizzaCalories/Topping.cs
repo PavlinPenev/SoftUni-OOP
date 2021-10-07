@@ -4,10 +4,11 @@ namespace PizzaCalories
 {
     public class Topping
     { 
-        private const double meatModifier = 1.2;
-        private const double veggiesModifier = 0.8;
-        private const double cheeseModifier = 1.1;
-        private const double sauceModifier = 0.9;
+        private const double MeatModifier = 1.2;
+        private const double VeggiesModifier = 0.8;
+        private const double CheeseModifier = 1.1;
+        private const double SauceModifier = 0.9;
+        private const double ModifierPerGram = 2;
 
         private string type;
         private int weight;
@@ -74,20 +75,20 @@ namespace PizzaCalories
             switch (Type.ToLower())
             {
                 case "meat":
-                    modifier = meatModifier;
+                    modifier = MeatModifier;
                     break;
                 case "veggies":
-                    modifier = veggiesModifier;
+                    modifier = VeggiesModifier;
                     break;
                 case "cheese":
-                    modifier = cheeseModifier;
+                    modifier = CheeseModifier;
                     break;
                 case "sauce":
-                    modifier = sauceModifier;
+                    modifier = SauceModifier;
                     break;
             }
 
-            CaloriesPerGram = 2 * Weight * modifier;
+            CaloriesPerGram = ModifierPerGram * Weight * modifier;
         }
     }
 }
