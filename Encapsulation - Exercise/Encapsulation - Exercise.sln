@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingSpree", "ShoppingSp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaCalories", "PizzaCalories\PizzaCalories.csproj", "{31EFD7B0-7EC4-4C75-BD8C-A65AC0BB4F3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Football Team Generator", "Football Team Generator\Football Team Generator.csproj", "{4917DFF1-4266-44EC-9EA6-83AF2282C2CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballTeamGenerator", "Football Team Generator\FootballTeamGenerator.csproj", "{4917DFF1-4266-44EC-9EA6-83AF2282C2CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
