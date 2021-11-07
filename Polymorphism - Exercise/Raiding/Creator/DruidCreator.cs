@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Raiding
 {
-    class DruidCreator : HeroCreator
+    public class DruidCreator : HeroCreator
     {
         private string _name;
 
