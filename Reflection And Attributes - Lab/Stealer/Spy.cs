@@ -27,7 +27,6 @@ namespace Stealer
             StringBuilder sb = new StringBuilder();                                                                                //
             Type typeClass = Type.GetType(className);                                                                              //
             FieldInfo[] fields = typeClass.GetFields(BindingFlags.Instance |BindingFlags.Static |BindingFlags.Public);             //
-            Object instanced = Activator.CreateInstance(typeClass);                                                                //
             foreach (var fieldInfo in fields)                                                                                      //
             {                                                                                                                      //
                 sb.AppendLine($"{fieldInfo.Name} must be private!");                                                               //
@@ -47,5 +46,39 @@ namespace Stealer
                                                                                                                                    //
             return sb.ToString().TrimEnd();                                                                                        //
         }                                                                                                                          //
+
+        public string RevealPrivateMethods(string className)                                                                                    //
+        {                                                                                                                                       //
+            Type typeClass = Type.GetType(className);                                                                                           //
+            MethodInfo[] methods = typeClass.GetMethods(BindingFlags.NonPublic |BindingFlags.Instance | BindingFlags.Static);                   //
+            StringBuilder sb = new StringBuilder();                                                                                             //
+            sb.AppendLine($"All Private Methods Of Class: {typeClass.FullName}");                                                               //
+            sb.AppendLine($"Base Class: {typeClass.BaseType.Name}");                                                                            //
+            foreach (var method in methods)                                                                                                     // 3. Mission Private Impossible
+            {                                                                                                                                   //
+                sb.AppendLine(method.Name);                                                                                                     //
+            }                                                                                                                                   //
+                                                                                                                                                //
+            return sb.ToString().TrimEnd();                                                                                                     //
+        }                                                                                                                                       //
+
+        public string CollectGettersAndSetters(string className)                                                        //
+        {                                                                                                               //
+            StringBuilder sb = new StringBuilder();                                                                     //
+            Type typeClass = Type.GetType(className);                                                                   //
+            MethodInfo[] allMethods = typeClass.GetMethods(BindingFlags.Static | BindingFlags.NonPublic |               //
+                                                        BindingFlags.Instance | BindingFlags.Public);                   //
+            foreach (var method in allMethods.Where(m => m.Name.StartsWith("get")))                                     //
+            {                                                                                                           //
+                sb.AppendLine($"{method.Name} will return {method.ReturnType}");                                        // 4. Collector
+            }                                                                                                           //
+                                                                                                                        //
+            foreach (var method in allMethods.Where(m => m.Name.StartsWith("set")))                                     //
+            {                                                                                                           //
+                sb.AppendLine($"{method.Name} will set field of {method.GetParameters().First().ParameterType}");       //
+            }                                                                                                           //
+                                                                                                                        //
+            return sb.ToString().TrimEnd();                                                                             //
+        }
     }
 }
