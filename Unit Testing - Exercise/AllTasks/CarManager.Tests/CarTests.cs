@@ -35,33 +35,19 @@ namespace Tests
         [Test]
         [TestCase("")]
         [TestCase(null)]
-        public void MakePropertySetterShouldValidateProperlyAndThrowException(string make)
+        public void MakePropertySetterShouldValidateProperlyAndThrowException(string makeModel)
         {
-            Assert.Throws<ArgumentException>(() => new Car(make, "A4", 11.0, 65.0));
-        }
-
-        [Test]
-        [TestCase("")]
-        [TestCase(null)]
-        public void ModelPropertySetterShouldValidateProperlyAndThrowException(string model)
-        {
-            Assert.Throws<ArgumentException>(() => new Car("Audi", model, 11.0, 65.0));
+            Assert.Throws<ArgumentException>(() => new Car(makeModel, "A4", 11.0, 65.0));
+            Assert.Throws<ArgumentException>(() => new Car("Audi", makeModel, 11.0, 65.0));
         }
 
         [Test]
         [TestCase(0)]
         [TestCase(-5.0)]
-        public void FuelConsumptionSetterShouldValidateProperlyAndThrowException(double fuelCons)
+        public void FuelConsumptionSetterShouldValidateProperlyAndThrowException(double value)
         {
-            Assert.Throws<ArgumentException>(() => new Car("Audi", "A4", fuelCons, 65.0));
-        }
-
-        [Test]
-        [TestCase(0)]
-        [TestCase(-65.0)]
-        public void FuelCapacitySetterShouldValidateProperlyAndThrowException(double fuelCap)
-        {
-            Assert.Throws<ArgumentException>(() => new Car("Audi", "A4", 11.0, fuelCap));
+            Assert.Throws<ArgumentException>(() => new Car("Audi", "A4", value, 65.0));
+            Assert.Throws<ArgumentException>(() => new Car("Audi", "A4", 11.0, value));
         }
 
         [Test] //Test methods and validations
