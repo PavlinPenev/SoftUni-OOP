@@ -4,7 +4,7 @@ using System.Linq;
 using NUnit.Framework;
 
 
-namespace Tests
+namespace DatabaseExtended.Tests
 {
     public class ExtendedDatabaseTests
     {
@@ -34,16 +34,16 @@ namespace Tests
         [Test]
         public void ConstructorShouldWorkCorrectly()
         {
-           // Assert.DoesNotThrow(() => new ExtendedDatabase(arrayPeople));
-           Person[] people = new Person[15];
+            // Assert.DoesNotThrow(() => new ExtendedDatabase(arrayPeople));
+            Person[] people = new Person[15];
 
-           for (int i = 0; i < people.Length; i++)
-           {
-               people[i] = new Person(1 + i, "name" + i);
-           }           
+            for (int i = 0; i < people.Length; i++)
+            {
+                people[i] = new Person(1 + i, "name" + i);
+            }
 
-           ExtendedDatabase db = new ExtendedDatabase(people);
-           Assert.AreEqual(15, db.Count);
+            ExtendedDatabase db = new ExtendedDatabase(people);
+            Assert.AreEqual(15, db.Count);
         }
 
         [Test]

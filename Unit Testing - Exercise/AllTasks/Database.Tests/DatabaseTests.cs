@@ -2,14 +2,14 @@ using System;
 using System.Linq;
 using NUnit.Framework;
 
-namespace Tests
+namespace Database.Tests
 {
     [TestFixture]
     public class DatabaseTests
     {
         private const int MaxCapacity = 16;
         private Database _database;
-        
+
 
         [SetUp]
         public void Setup()
@@ -23,7 +23,7 @@ namespace Tests
         public void TestConstructor(int start, int count)
         {
             int[] newPopulate = Enumerable.Range(start, count).ToArray();
-            Assert.That(() => _database = new Database(newPopulate), Throws.InvalidOperationException, 
+            Assert.That(() => _database = new Database(newPopulate), Throws.InvalidOperationException,
                 "Constructor with more than 16 elements doesn't throw exception");
         }
 

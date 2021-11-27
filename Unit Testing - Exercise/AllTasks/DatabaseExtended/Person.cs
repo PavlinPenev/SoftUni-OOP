@@ -1,4 +1,4 @@
-﻿namespace ExtendedDatabase
+﻿namespace DatabaseExtended
 {
     public class Person
     {
@@ -7,8 +7,8 @@
 
         public Person(long id, string userName)
         {
-            this.Id = id;
-            this.UserName = userName;
+            Id = id;
+            UserName = userName;
         }
 
         public string UserName

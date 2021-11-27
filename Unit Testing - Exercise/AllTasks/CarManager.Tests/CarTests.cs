@@ -1,7 +1,7 @@
 using System;
 using NUnit.Framework;
 
-namespace Tests
+namespace CarManager.Tests
 {
     public class CarTests
     {
@@ -77,7 +77,7 @@ namespace Tests
         {
             _testCar.Refuel(65);
             _testCar.Drive(10);
-            Assert.AreEqual(63.9,_testCar.FuelAmount);
+            Assert.AreEqual(63.9, _testCar.FuelAmount);
         }
 
         [Test]
