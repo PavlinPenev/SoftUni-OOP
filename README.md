@@ -1,5 +1,5 @@
 # SoftUni C\# OOP course
-Problem Solultions repository for the tasks given in the course.
+Problem Solutions repository for the tasks given in the course.
 <p></p>
 <div>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<img style="width: 40%" src="https://i.pinimg.com/originals/08/61/fa/0861fa66d2b0f98ffd144d7cfe9c19c8.png">&ensp;&ensp;&ensp;
 &ensp;&ensp;&ensp;&ensp;&ensp;
